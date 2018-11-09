@@ -29,7 +29,8 @@ install:
   - npm i -g lix
   - lix install haxe $HAXE_VERSION
   - lix download
-  - sed -i '/-cp/c\-cp $TRAVIS_BUILD_DIR' haxe_libraries/haxeui-core.hxml # TODO: this should be a lix command
+  - sed -i '/-cp/c\-cp '"$TRAVIS_BUILD_DIR" haxe_libraries/haxeui-core.hxml # TODO: this should be a lix command
+  - cat haxe_libraries/haxeui-core.hxml
   # - lix install 'gh:haxeui/haxeui-html5#new-component-method'
   
 script:
